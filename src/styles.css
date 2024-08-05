@@ -1,0 +1,193 @@
+/* Improved styles for Japan Tourism Webpage */
+
+:root {
+    --japanese-red: #BC002D;
+    --japanese-indigo: #2E5C6E;
+    --japanese-gold: #E6B422;
+    --soft-white: #F4F4F4;
+    --dark-gray: #333333;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--dark-gray);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--japanese-red) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--japanese-indigo) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--japanese-red) !important;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/api/placeholder/1920/1080'), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+    background-color: var(--japanese-red);
+    border-color: var(--japanese-red);
+}
+
+.btn-primary:hover {
+    background-color: #9c0026;
+    border-color: #9c0026;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    color: var(--japanese-indigo);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--japanese-red), var(--japanese-gold));
+}
+
+/* Destination Card Styles */
+.destination-card {
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.destination-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card .card-body {
+    background-color: white;
+}
+
+.destination-card .card-title {
+    color: var(--japanese-red);
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    color: var(--japanese-red);
+    border-color: var(--japanese-red);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--japanese-red);
+    color: white;
+}
+
+/* Experience Styles */
+.experience-item {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.experience-item i {
+    color: var(--japanese-gold);
+}
+
+/* Map Styles */
+#japanMap {
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-gray);
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--japanese-gold) !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.destination-card, .experience-item, h2,
